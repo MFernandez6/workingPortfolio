@@ -1,55 +1,38 @@
-<!-- Demo Layout for Bootstrap (with cards) -->
 <!DOCTYPE html>
 <html lang="en-us">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>M.A. Fernandez's Portfolio</title>
 
-    <!-- We need to bring in the bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
-    <!-- NavBar (copied and pasted from WC3) -->
-    <!-- Static navbar -->
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="#">navigation</a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="portfolio.html">portfolio</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="contact.html" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contact
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                </li>
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="Search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
-    </nav>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    <br>
 
     <!-- Main Body goes in Container -->
     <div class="container">
@@ -57,40 +40,48 @@
             <div class="col-sm-12">
                 <!-- The content in this div gets wrapped in a card -->
                 <div class="card">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-            <div class="col-lg-8">
-            <br>
-                <h2>Contact</h2>
-                <p>Miguel Angel Fernandez</p>
-                <p>t: (786)417-3869</p>
-                <p>e: MiguelFernandez023@gmail.com</p>
-                <p>s: www.linkedin.com/in/miguelfernandez023</p>
-            </div>
-            <br>
-                <img class="img img-thumbnail" width=75% src="https://scontent-dfw5-1.xx.fbcdn.net/v/t31.0-8/459573_3112029555293_535503129_o.jpg?_nc_cat=111&_nc_oc=AQmNTxM4x1bAbErrayv-AEjJrwa1kkZo8sULAD7Uq9dASEuAhE5V5TSN3s3RNDA9ozU&_nc_ht=scontent-dfw5-1.xx&oh=18603b6ade2a142c4b441c34eec751fd&oe=5E3C7A56">
-            </div>
-        </div>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-lg-12">
-                <!-- The content in this div gets wrapped in a card -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img class="" src="www.facebook.com" alt="">
-                            <img class="" src="www.instagram.com" alt="">
-                            <img class="" src="www.twitter.com" alt="">
-                        </div>
+                        <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                            <div id="portfolioHeader">
+                                                Miguel A. Fernandez, M.Sc. | Contact
+                                            </div>
+                                        <ul>
+                                            <li>t.  (786)417-3869</li>
+                                            <li>e.  MiguelFernandez023@gmail.com</li>
+                                            <li>l.  linkedin.com/in/miguelfernandez023</li>
+                                        </ul>
+                                    </div>
+                                    <br>
+                                    <img src="https://scontent-dfw5-1.xx.fbcdn.net/v/t31.0-8/459573_3112029555293_535503129_o.jpg?_nc_cat=111&_nc_oc=AQmNTxM4x1bAbErrayv-AEjJrwa1kkZo8sULAD7Uq9dASEuAhE5V5TSN3s3RNDA9ozU&_nc_ht=scontent-dfw5-1.xx&oh=18603b6ade2a142c4b441c34eec751fd&oe=5E3C7A56" id="center">
+                                </div>
+                            </div>
+                            <br>
+                            <br>
+                            <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="card">
+                                            <div class="card-body">
+                                                <div class="text-center">
+                                                    <a href="https://www.facebook.com/miguel.fff" class="fa fa-facebook"></a>
+                                                    <a href="https://twitter.com/Miguel__Fx" class="fa fa-twitter"></a>
+                                                    <a href="https://www.linkedin.com/in/miguelfernandez023/" class="fa fa-linkedin"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <footer>
+                            <br>
+                            <div class="container">
+                                <p id="copyright">MAF &copy</p>
+                            </div>
+                        </footer>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</body>
+            <br>
+    </body>
 
 </html>

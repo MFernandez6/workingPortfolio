@@ -1,23 +1,18 @@
-<!-- Demo Layout for Bootstrap (with cards) -->
 <!DOCTYPE html>
 <html lang="en-us">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Website</title>
+    <title>M.A. Fernandez's Portfolio</title>
 
-    <!-- We need to bring in the bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
-    <!-- NavBar (copied and pasted from WC3) -->
-    <!-- Static navbar -->
     <nav class="navbar navbar-expand-sm navbar-light bg-light">
-        <a class="navbar-brand" href="#">navigation</a>
         <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,75 +26,91 @@
                 <li class="nav-item">
                     <a class="nav-link" href="portfolio.html">Portfolio</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="contact.html" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Contact
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
+                <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
                 </li>
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="Search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
         </div>
     </nav>
-
+    <br>
     <!-- Main Body goes in Container -->
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <!-- The content in this div gets wrapped in a card -->
                 <div class="card">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="col-lg-12">
-                    <br>
-                    <h2>Miguel's First Website</h2>
-                </div>
-                <br>
-                <img class="img img-thumbnail" width=75%
-                    src="https://scontent-dfw5-1.xx.fbcdn.net/v/t31.0-8/10828037_10203709434071960_608850053388793344_o.jpg?_nc_cat=102&_nc_oc=AQk86MPBIIXF4VL-tGw-m3H4hGEC5q8AoCuqd0bB54QnEu5jg4bpH7F2Lnb0NhV8S-s&_nc_ht=scontent-dfw5-1.xx&oh=bbbf95fe113a6c48039f8a1170e38dcc&oe=5DF682AE">
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-lg-12">
-                <img class="img img-thumbnail" width=75%
-                    src="https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/17021647_10208702793102815_4624468659502588180_n.jpg?_nc_cat=107&_nc_oc=AQkGWneOTuH787FbEhI_TmpSjpCIk9DRPbO_dd-hW0xxfu-x74X9hn7yzPjZly-aFeE&_nc_ht=scontent-dfw5-1.xx&oh=f3af0b6bceb5fdc2d270a7d45d2e1010&oe=5E3150C6">
-            </div>
-        </div>
-        <br>
-        <div class="row">
-            <div class="col-lg-12">
-                <!-- The content in this div gets wrapped in a card -->
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img class="" src="http://placehold.it/50x50" alt="">
-                            <img class="" src="http://placehold.it/50x50" alt="">
-                            <img class="" src="http://placehold.it/50x50" alt="">
+                        <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="card">
+                                            <div id="homeHeader">
+                                                Miguel A. Fernandez, M.Sc. | Prologue
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br>
+                                <div class="row">
+                                        <div class="col-lg-3">
+                                            <img class="img img-thumbnail" src="https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/29347_1315501043203_4234272_n.jpg?_nc_cat=103&_nc_oc=AQkF7lLsZnF59Xr6-40agDNGzWUC8E9UkcUOcXzAThrobcTbSahEgQalwHGZCTrvexU&_nc_ht=scontent.fapa1-1.fna&oh=920d4995bff963f4f1708012475579da&oe=5E33277A">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <p id="peruInfoHeader">PERU BORN</p>
+                                            <p id="peruInfo">Miguel Fernandez was born in Lima, Peru on December 6, 1987. Miguel moved with his family to Miami
+                                                shortly after Hurricane Andrew. However, since the storm devestated South Florida it forced him and
+                                                his family to move to California and stay with relatives near San Francisco. Miguel celebrated his fifth birthday
+                                                with his family in California before moving back to Florida.</p>
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <div class="row">
+                                        <div class="col-lg-3">
+                                            <img class="img img-thumbnail" src="https://scontent.fapa1-1.fna.fbcdn.net/v/t1.0-9/46459287_10213013997080220_8221086782054203392_n.jpg?_nc_cat=106&_nc_oc=AQluHi1Kek_UVpB0ruOOpiipaUrnPXYJms3RPILRJafoyJw3QKvdWXm2jV7l16tAXPQ&_nc_ht=scontent.fapa1-1.fna&oh=3d3cd92ed518ce6bca38a0a136a05694&oe=5DEEF982">
+                                        </div>
+                                        <div class="col-lg-9">
+                                            <p id="miamiInfoHeader">MIAMI RAISED</p>
+                                            <p id="miamiInfo">The Fernandez Family moved back to Miami, Florida in 1996. Miguel's family settled in the small
+                                                neighborhood of Kendall - a suburb of Miami. Miguel attended Winston Park Elementary, Howard D.
+                                                McMillan Middle, and Miami Sunset Senior High School. He started his college career at Miami-Dade
+                                                College before transferring to Florida State University. He received his Certificate in Paralegal
+                                                Studies from the University of Miami. Miguel completed his first year of law school at Barry
+                                                University School of Law before switching programs and completing a Master of Science in Law and
+                                                Policy from Nova Southeastern University - receiving in the process an invitation from the world's
+                                                largest collegiate honor society given to the Top 15% of students, and graduating Magna Cum Laude from NSU.
+                                                <br>
+                                                <br>
+                                                Miguel's passion for the legal field has contributed to his success as a paralegal. Miguel focused
+                                                on helping victims of personal injury negligence; seeking compensation for motor vehicle accidents
+                                                and premises liability matters for his clients. Miguel has recently started as an Insurance Defense
+                                                Paralegal advocating for fair payments for property claims.
+                                            </p>
+                                            <br>
+                                        </div>
+                                    </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <a href="https://www.facebook.com/miguel.fff" class="fa fa-facebook"></a>
+                                                <a href="https://twitter.com/Miguel__Fx" class="fa fa-twitter"></a>
+                                                <a href="https://www.linkedin.com/in/miguelfernandez023/" class="fa fa-linkedin"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    <footer>
+                        <br>
+                        <div class="container">
+                            <p id="copyright">MAF &copy</p>
+                        </div>
+                    </footer>
                 </div>
             </div>
         </div>
-    </div>
-
-    <footer>
-        <div class="container">
-            Copyright &copy;
-        </div>
-    </footer>
+        <br>
 </body>
 
 </html>
