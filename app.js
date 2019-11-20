@@ -1,83 +1,105 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyCEe4cKSqbkoj9DGmB2dPM6xTfTMrnCKcM",
-    authDomain: "project-1-bored-board.firebaseapp.com",
-    databaseURL: "https://project-1-bored-board.firebaseio.com",
-    projectId: "project-1-bored-board",
-    storageBucket: "project-1-bored-board.appspot.com",
-    messagingSenderId: "934204858779",
-    appId: "1:934204858779:web:5bb0a29eba5bf9f9a1413e"
-};
-
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-let database = firebase.database();
-
-// ---------------------------------------------
+// ------ APPS
 
 $(document).ready(function () {
     configureSearch();
     gapi.load("client");
 });
 
-// Restaurant locator & location 
-// API wo Key
 function configureSearch() {
 $("#submit").click(function () {
     $("#start-page").hide();
     $(".foodDirectory").show();
-    let keyAPI = "";
-    let yelpAPI = "https://api.yelp.com/v3/businesses/search";
-    $.ajax({
-        url: yelpAPI,
-        method: "GET"
-    })
-        .then(function (response) {
-            // console.log(response)
-            let foodDirectoryResults = $("<div>" + response[1, 2, 3].punchline + "</div>");
-            $("#foodDirectoryResults").html(foodDirectoryResults);
-            // console.log(response[1, 2, 3].punchline);
-        });
 
-// ------ API w Key
-    let jokeGIFapi = "5aq9ySNcbmDa3eP7R5B0OdOaJBvYihlY"
-    let jokeGIFurl = "https://api.giphy.com/v1/gifs/random?api_key=" + jokeGIFapi;
+// ------ Yahoo! Weather 
+
+    var weatherURL = 'https://weather-ydn-yql.media.yahoo.com/forecastrss';
+    var method = 'GET';
+    var app_id = 'ov3WsG30';
+    let weatherConsumerKey = "dj0yJmk9S3BnYVFTMFByUnMyJmQ9WVdrOWIzWXpWM05ITXpBbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWVk";
+    let weatherConsumerSecret = "742d88bd3ff7f47a3932bbbd6e7ec745475f82e0";
+    var concat = '&';
+    var query = {'location': 'miami,fl', 'format': 'json'};
+    var oauth = {
+        'oauth_consumer_key': weatherConsumerKey,
+        'oauth_nonce': Math.random().toString(36).substring(2),
+        'oauth_signature_method': 'HMAC-SHA1',
+        'oauth_timestamp': parseInt(new Date().getTime() / 1000).toString(),
+        'oauth_version': '1.0'
+    };
+
+    var merged = {}; 
+    $.extend(merged, query, oauth);
+    // Note the sorting here is required
+    var merged_arr = Object.keys(merged).sort().map(function(k) {
+      return [k + '=' + encodeURIComponent(merged[k])];
+    });
+    var signature_base_str = method
+      + concat + encodeURIComponent(url)
+      + concat + encodeURIComponent(merged_arr.join(concat));
+    
+    var composite_key = encodeURIComponent(weatherConsumerSecret) + concat;
+    var hash = CryptoJS.HmacSHA1(signature_base_str, composite_key);
+    var signature = hash.toString(CryptoJS.enc.Base64);
+    
+    oauth['oauth_signature'] = signature;
+    var auth_header = 'OAuth ' + Object.keys(oauth).map(function(k) {
+      return [k + '="' + oauth[k] + '"'];
+    }).join(',');
+
+
     $.ajax({
+        url: weatherURL + '?' + $.param(query),
+        headers: {
+          'Authorization': auth_header,
+          'X-Yahoo-App-Id': app_id 
+        },
+        method: 'GET',
+        success: function(data){
+          console.log(data);
+        }
+    });
+
+// ------ Food Choices for Dummies 
+
+    let jokeGIFapi = "5aq9ySNcbmDa3eP7R5B0OdOaJBvYihlY";
+    let jokeGIFurl = "https://api.giphy.com/v1/gifs/random?api_key=" + jokeGIFapi;
+
+    $.ajax({
+
         url: jokeGIFurl,
         method: "GET"
     }).then(function (response) {
+
         let newDIV = $("<div>");
         // console.log(response);
         let newGIF = $("<img>");
+
         newGIF.addClass("media");
         newGIF.attr("src", response.data.image_original_url);
         newDIV.append(newGIF);
         $("#jokeGIF").html(newDIV);
-    })
-})
 
-$("#like").click(function() {
-    database.ref("jokesLiked").once("value", function(snapshot) {
-        let totalLikes = snapshot.val() + 1;
-        database.ref("jokesLiked").set(totalLikes);
-        if (totalLikes === 1)
-            $("#global-message").text(totalLikes + " person liked a joke");
-        else
-            $("#global-message").text(totalLikes + " people liked a joke");
-        $("#global-message").fadeIn();
-        setTimeout(function () { $("#global-message").fadeOut(); }, 3000);
     });
-});
 
-$("#dislike").click(function() {
-    database.ref("jokesDisliked").once("value", function(snapshot) {
-        let totalDislikes = snapshot.val() + 1;
-        database.ref("jokesDisliked").set(totalDislikes);
-        if (totalDislikes === 1)
-            $("#global-message").text(totalDislikes + " person got confused");
-        else
-            $("#global-message").text(totalDislikes + " people got confused");
-        $("#global-message").fadeIn();
-        setTimeout(function () { $("#global-message").fadeOut(); }, 3000);
-        
-    })
+// ------ Portfolio News
+
+    let newsAPI = "5aq9ySNcbmDa3eP7R5B0OdOaJBvYihlY";
+    let newsURL = "https://api.giphy.com/v1/gifs/random?api_key=" + newsAPI;
+
+    $.ajax({
+
+        url: newsURL,
+        method: "GET"
+    }).then(function (response) {
+
+        let newsDIV = $("<div>");
+        // console.log(response);
+        let newGIF = $("<img>");
+
+        newGIF.addClass("media");
+        newGIF.attr("src", response.data.image_original_url);
+        newsDIV.append(newGIF);
+        $("#jokeGIF").html(newDIV);
+
+    });
 });
