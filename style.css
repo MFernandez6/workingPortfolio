@@ -1,93 +1,10 @@
 body {
-    background-color: burlywood;
-    font-family: sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #e0e0e0;
 }
 
-#homeHeader {
-    text-align: center;
-    font-weight: bold;
-    font-family: sans-serif;
-    padding: 15px;
-}
-
-#peruInfoHeader {
-    text-align: left;
-    font-weight: bold;
-    padding-right: 25px;
-}
-
-#peruInfo {
-    text-align: justify;
-    padding-right: 25px;
-}
-
-#miamiInfoHeader {
-    text-align: left;
-    font-weight: bold;
-    padding-right: 25px;
-}
-
-#miamiInfo {
-    text-align: justify;
-    padding-right: 25px;
-}
-
-#portfolioHeader {
-    text-align: center;
-    font-weight: bold;
-    padding: 25px;
-}
-
-#portfolioWeather {
-    display: block;
-    padding: 20px;
-    margin-left: 40%;
-    margin-right: 20%;
-    width: 65%;
-}
-
-#foodDirectoryTitle {
-    display: block;
-    margin-left: 10%;
-    margin-right: 25%;
-    width: 65%;
-}
-
-.foodDirectory {
-    display: block;
-    margin-left: 40%;
-    margin-right: 25%;
-    width: 65%;
-}
-#portfolioNews {
-    display: block;
-    padding: 20px;
-    margin-left: 40%;
-    margin-right: 20%;
-    width: 65%;
-}
-
-#contactHeader {
-    text-align: left;
-    font-weight: bold;
-}
-
-
-#center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 65%;
-}
-
-li {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 65%;
-}
-
-#copyright {
-    color: whitesmoke;
-    font-weight: bold;
+main {
+    flex: 1 0 auto;
 }
